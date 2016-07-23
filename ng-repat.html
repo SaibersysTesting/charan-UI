@@ -1,0 +1,50 @@
+<DOCTYPE html>
+<html ng-app="myApp">
+<meta charest="utf-8"/>
+<head>
+
+</head>
+
+<body ng-controller="myctrl">
+
+<h1>Employers Info</h1>
+<table>
+         <tr> <td>S.No:</td>
+              <td>Frist name </td>
+		    <td>Last name</td>
+			 <td> Email </td>
+			 <td>phone  </td>
+         </tr>
+		 <tr ng-repeat="emp in employers">
+		     <td ng-bind="$index+1"></td>
+		    <td ng-bind="emp.firstname"></td>
+			<td ng-bind="emp.lastname"></td>
+			<td ng-bind="emp.Email"></td>
+			<td ng-bind="emp.phone"></td>
+		    </td>
+		
+		 </tr>
+</table>
+
+ <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+<script>
+
+   var myApp=angular.module("myApp",[]);
+   myApp.controller("myctrl",function($scope){
+   $scope.employers = [{ firstname:"uday",lastname:"u",Email:"uday@gmail.com",phone:"98023047334"},
+                       { firstname:"charan",lastname:"c",Email:"charan@gmail.com",phone:"203047334"},
+					   { firstname:"shiva",lastname:"s",Email:"shiva@gmail.com",phone:"32577582"},];
+   
+   });
+
+
+</script>
+
+ 
+ 
+ 
+ 
+ 
+ </body>
+
+</html>
