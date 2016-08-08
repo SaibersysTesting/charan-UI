@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html ng-app="mySampleApp">
+	<head>
+	<meta charset="utf-8"/>
+		<title>  </title>
+		</head>
+		<body controller="myctrl">
+
+        </table>	
+           <input type="type" placeholder="name" ng-model="name"/>
+		    <input type="button" value="save"ng-click="myfunc"/>
+		   
+	<span ng-bind="name"> </span>
+		 <script scr="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>		
+		
+		<script>
+		var myApp = angular.module("mySampleApp",[]);
+		
+		 myApp.controller("myctrl",function($scope){
+		  $scope.myfun = function(){
+		     $scope.name = "Angularjs example"
+		  }
+		  
+		  });
+		</script>
+		
+		</body>
+		
+		
+		
+</html>
